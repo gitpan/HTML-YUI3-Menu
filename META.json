@@ -39,11 +39,11 @@
    "provides" : {
       "HTML::YUI3::Menu" : {
          "file" : "lib/HTML/YUI3/Menu.pm",
-         "version" : "1.00"
+         "version" : "1.01"
       },
       "HTML::YUI3::Menu::Util::Config" : {
          "file" : "lib/HTML/YUI3/Menu/Util/Config.pm",
-         "version" : "1.00"
+         "version" : "1.01"
       }
    },
    "release_status" : "stable",
@@ -52,5 +52,5 @@
          "http://opensource.org/licenses/artistic-license.php"
       ]
    },
-   "version" : "1.00"
+   "version" : "1.01"
 }

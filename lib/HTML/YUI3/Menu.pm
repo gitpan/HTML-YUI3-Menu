@@ -17,7 +17,7 @@ fieldhash my %switch_js     => 'switch_js';
 fieldhash my %template_path => 'template_path';
 fieldhash my %tree          => 'tree';
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 # -----------------------------------------------
 # Note: This is a function, not a method.
@@ -308,6 +308,8 @@ for help on unpacking and installing distros.
 
 =head1 Installing the module
 
+=head2 The Module Itself
+
 Install L<HTML::YUI3::Menu> as you would for any C<Perl> module:
 
 Run:
@@ -331,6 +333,39 @@ or:
 	make (or dmake or nmake)
 	make test
 	make install
+
+=head2 The Configuration File
+
+All that remains is to tell L<HTML::YUI3::Menu> your values for some options.
+
+For that, see config/.hthtml.yui3.menu.conf.
+
+If you are using Build.PL, running Build (without parameters) will run scripts/copy.config.pl,
+as explained next.
+
+If you are using Makefile.PL, running make (without parameters) will also run scripts/copy.config.pl.
+
+Either way, before editing the config file, ensure you run scripts/copy.config.pl. It will copy
+the config file using L<File::HomeDir>, to a directory where the run-time code in
+L<HTML::YUI3::Menu> will look for it.
+
+	shell>cd HTML-YUI3-Menu-1.00
+	shell>perl scripts/copy.config.pl
+
+Under Debian, this directory will be $HOME/.perl/HTML-YUI3-Menu/. When you
+run copy.config.pl, it will report where it has copied the config file to.
+
+Check the docs for L<File::HomeDir> to see what your operating system returns for a
+call to my_dist_config().
+
+The point of this is that after the module is installed, the config file will be
+easily accessible and editable without needing permission to write to the directory
+structure in which modules are stored.
+
+That's why L<File::HomeDir> and L<Path::Class> are pre-requisites for this module.
+
+All modules which ship with their own config file are advised to use the same mechanism
+for storing such files.
 
 =head1 Constructor and Initialization
 

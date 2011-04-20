@@ -17,10 +17,10 @@ name: HTML-YUI3-Menu
 provides:
   HTML::YUI3::Menu:
     file: lib/HTML/YUI3/Menu.pm
-    version: 1.00
+    version: 1.01
   HTML::YUI3::Menu::Util::Config:
     file: lib/HTML/YUI3/Menu/Util/Config.pm
-    version: 1.00
+    version: 1.01
 requires:
   Config::Tiny: 2.13
   File::Copy: 2.18
@@ -30,4 +30,4 @@ requires:
   Text::Xslate: 1.0007
 resources:
   license: http://opensource.org/licenses/artistic-license.php
-version: 1.00
+version: 1.01
